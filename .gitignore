@@ -15,5 +15,5 @@
 /log/*.log
 /tmp
 
-
+/add_this_*
 /config/database.yml
