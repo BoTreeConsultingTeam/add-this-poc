@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <title></title>
+        <style type="text/css">
+.modal_area {
+width: 800px;
+margin: auto;
+postion: relative;
+background-color: white;
+border: 3px solid white;
+box-shadow: #666 0 0 10px;
+-moz-box-shadow: #666666 0 0 10px;
+-webkit-box-shadow: #666 0 0 10px;
+}
+.modal_area .closebtn .close {
+float: right !important;
+color: rgb(187, 187, 187) !important;
+font-size: 35px !important;
+font-weight: bold !important;
+margin-right: 3px;
+text-shadow: 0 1px 0 white !important;
+opacity: 0.9 !important;
+}
+button.close {
+-webkit-appearance: none;
+padding: 0;
+cursor: pointer;
+background: transparent;
+border: 0;
+input, button, select, textarea {
+font-family: inherit;
+font-size: inherit;
+line-height: inherit;
+}
+}
+.close {
+float: right;
+font-size: 21px;
+font-weight: bold;
+line-height: 1;
+color: #000;
+text-shadow: 0 1px 0 #fff;
+filter: alpha(opacity=20);
+opacity: .2;
+}
+.exitintent_modal {
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+-o-border-radius: 5px;
+border-radius: 5px;
+display: none;
+}
+.exitintent_modal .text {
+width: 470px;
+padding: 15px 0px 0px 50px;
+}
+.exitintent_modal h2 {
+font: 600 50px/1em 'Muli',sans-serif;
+color: #034D86;
+margin-bottom: 30px;
+}
+.exitintent_modal h2 span {
+display: block;
+color: #323a45;
+font-weight: 500;
+}
+.exitintent_modal p {
+font-size: 15px;
+margin: 0px;
+line-height: 1.8em;
+}
+p {
+font: 300 35px/52px 'Open Sans',sans-serif;
+color: #323a45;
+margin-bottom: 55px;
+}
+.exitintent_modal form {
+margin: 30px 0 10px 0;
+}
+form {
+display: inline-block;
+margin-bottom: 31px;
+}
+a {
+color: #16a085;
+text-decoration: none;
+-webkit-transition: 0.25s;
+transition: 0.25s;
+}
+.exitintent_modal p input {
+font-size: 15px;
+padding: 16px 25px;
+background-color: #034D86;
+border: 0;
+color: #fff;
+width: 300px;
+font-weight: 700;
+border-radius: 5px;
+line-height: 1.5em;
+text-transform: uppercase;
+text-align: center;
+cursor: pointer;
+}
+        </style>
+    </head>
+    <body>
+    <button onclick="displayPopup()">The time is?</button>
+        <script>
+  function displayPopup() {
+    var iDiv = document.createElement('div');
+    //iDiv.id = 'block';
+    iDiv.className = 'close1';
+    document.getElementsByTagName('body')[0].appendChild(iDiv);
+    var innerDiv = document.createElement('div');
+    innerDiv.className = 'modal_area';
+    iDiv.appendChild(innerDiv);
+    var innerDiv2 = document.createElement('div');
+    innerDiv2.className = 'closebtn';
+    innerDiv.appendChild(innerDiv2);
+    innerDiv2.innerHTML = '<button type="button" class="close" onclick="closePopup()"><span>x</span></button>';
+    var innerDiv3 = document.createElement('div');
+    innerDiv3.className = 'exitintent_modal';
+    innerDiv3.id = 'block2';
+    innerDiv3.setAttribute("style", "display: block;background: url('http://userfiles.exitintent.io/OaAc13Z5SG2dyGH23ZrZ_moto.jpg') 475px 0px no-repeat #fff;background-size: 320px;");
+    innerDiv.appendChild(innerDiv3);
+    innerDiv3.innerHTML = '<div class="text"><h2><strong class="ng-binding">50% OFF </strong><span class="ng-binding"> ON ALL PHONES </span></h2><p class="ng-binding">Festive Season 50% discount can be availed on all Phone purchases. This limited offer is valid till 30 August 2014. Buy now to avail this discount.</p><form class="tshirt_form ng-pristine ng-valid"><a href=""><p class="button" style="display:inline"><input value="Buy Now !"></p></a></form><br><br><small class="ng-binding"></small></div>';
+    //var innerDiv4 = document.createElement('div');
+    //innerDiv4.className = 'modal-footer';
+    //innerDiv.appendChild(innerDiv4);
+    //innerDiv4.innerHTML = '<button type="button" class="btn btn-default" onclick="closePopup()">Close</button>';
+  }
+  function closePopup() {
+    var elements = document.getElementsByClassName('close1');
+    for(var i = 0, length = elements.length; i < length; i++) {
+      elements[i].style.display = 'none';
+    } 
+  }
+</script>
+    </body>
+</html>
