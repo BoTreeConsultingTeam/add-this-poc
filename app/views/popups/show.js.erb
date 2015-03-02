@@ -1,9 +1,12 @@
+
+
 function closePopup() {
     var elements = document.getElementsByClassName('close1');
     for(var i = 0, length = elements.length; i < length; i++) {
       elements[i].style.display = 'none';
     } 
   }
+
 show = function () {
   var iDiv = document.createElement('div');
     iDiv.className = 'close1';
@@ -19,8 +22,30 @@ show = function () {
     var innerDiv3 = document.createElement('div');
     innerDiv3.setAttribute("style", "display: block;background: url('http://userfiles.exitintent.io/OaAc13Z5SG2dyGH23ZrZ_moto.jpg') 475px 0px no-repeat #fff;background-size: 320px;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px;");
     innerDiv.appendChild(innerDiv3);
-    innerDiv3.innerHTML = "<div style='width: 470px;padding: 15px 0px 0px 50px;''><h2 style='color: #034d86;font: 600 50px/1em Muli,sans-serif;margin-bottom: 30px;'><strong>50% OFF </strong><span style='display: block;color: #323a45;font-weight: 500;''> ON ALL PHONES </span></h2><p style='font-size: 15px;margin: 0px;line-height: 1.8em;font: 300 35px/52px 'Open Sans',sans-serif;color: #323a45;margin-bottom: 55px;''>Festive Season 50% discount can be availed on all Phone purchases. This limited offer is valid till 30 August 2014. Buy now to avail this discount.</p><form style='margin: 30px 0 10px 0;display: inline-block;margin-bottom: 31px;''><a href='' style='color: #16a085;text-decoration: none;-webkit-transition: 0.25s;transition: 0.25s;'><p class='button' style='display:inline'><input style='font-size: 15px;padding: 16px 25px;background-color: #034D86;border: 0;color: #fff;width: 300px;font-weight: 700;border-radius: 5px;line-height: 1.5em;text-transform: uppercase;text-align: center;cursor: pointer;'' value='Buy Now !''></p></a></form><br><br><small></small></div>";
+    innerDiv3.innerHTML = "<div style='width: 470px;padding: 15px 0px 0px 50px;''><h2 style='color: #034d86;font: 600 50px/1em Muli,sans-serif;margin-bottom: 30px;'><strong>50% OFF </strong><span style='display: block;color: #323a45;font-weight: 500;''> ON ALL PHONES </span></h2><p style='font-size: 15px;margin: 0px;line-height: 1.8em;font: 300 35px/52px 'Open Sans',sans-serif;color: #323a45;margin-bottom: 55px;''>Festive Season 50% discount can be availed on all Phone purchases. This limited offer is valid till 30 August 2014. Buy now to avail this discount.</p><form style='margin: 30px 0 10px 0;display: inline-block;margin-bottom: 31px;''><a href='' style='color: #16a085;text-decoration: none;-webkit-transition: 0.25s;transition: 0.25s;'><p class='' style='display:inline'><a href='javascript:void(0)' style='font-size: 15px;padding: 16px 25px;background-color: #034D86;border: 0;color: #fff;width: 300px;font-weight: 700;border-radius: 5px;line-height: 1.5em;text-transform: uppercase;text-align: center;cursor: pointer;text-decoration: none;'' onclick='sendAjax()'>Buy Now !</a></p></a></form><br><br><small></small></div>";
 }
 setTimeout(function() {
   show();
 }, 5000);
+
+function sendAjax()
+{
+var xmlhttp;
+if (window.XMLHttpRequest){
+  // code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+}else{
+  // code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.onreadystatechange=function(){
+  if (xmlhttp.readyState==4 && xmlhttp.status==200){
+    alert("gggg");
+    return false;
+    //document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+  }
+}
+xmlhttp.open("GET","http://localhost:3000/send_ajax?fname=Shahid&lname=Ansari",false);
+xmlhttp.send();
+return false;
+}
