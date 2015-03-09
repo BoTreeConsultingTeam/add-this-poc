@@ -15,5 +15,16 @@ class PopupsController < ApplicationController
   	puts "=============================Lirst Name:#{@last_name}"
   	render :text => 'OK!'	
   end
-
+  
+  def my_method
+    send_file Rails.root.join("public", "track.png"), type: "image/png", disposition: "inline"
+    puts "=============================#{params[:value1]}"
+    puts "=============================#{params[:valu2]}"
+    puts "=============================#{params[:value3]}"
+    puts "======================cookies_id: #{cookies[:username]}"
+    puts request.headers["Accept"]
+    puts request.headers["Host"]
+    puts request.headers["User-Agent"]
+  end
+  
 end

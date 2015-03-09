@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'popups/show'
   get "send_ajax" => "popups#ajax"
+  root 'popups#index'
+  get "/_ctrack.gif" => "popups#my_method"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
